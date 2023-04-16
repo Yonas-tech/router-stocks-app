@@ -2,12 +2,23 @@ import { Link } from "react-router-dom";
 
 export default function Stocks(props) {
 
-  // function stockChange(){
-  //   return(
-  //     <>
-  //     </>
-  //   )
-  // }
+  function stockChange(stock) {
+    let change = Math.round(stock.change * 100) / 100;
+    if (change < 0) {
+      return (
+        <td class="red">
+          {Math.round(change*stock.open)/100 + ' ('+ change +'%)'}
+        </td>
+      )
+    }
+    else if (change>0){
+      return (
+        <td className='green'>
+          {Math.round(change*stock.open)/100 + ' ('+ change +'%)'}
+        </td>
+      )
+    }
+  }
 
   return (
     <main className="dashboard">
@@ -26,7 +37,8 @@ export default function Stocks(props) {
               <tr key={idx}>
                 <td><Link to={`/stocks/${stock.symbol}`} ><h2>{stock.name}</h2></Link></td>
                 <td>{stock.lastPrice}</td>
-                <td>{Math.round(stock.change * 100) / 100}</td>
+                {/* <td>{Math.round(stock.change * 100) / 100}</td> */}
+                {stockChange(stock)}
               </tr>
             );
           })}
