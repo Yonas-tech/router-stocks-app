@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# React Router Stock App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is built using react router. 
 
-## Available Scripts
+The routing table:
 
-In the project directory, you can run:
+![routing table](./src/Images/routing_table.jpg)
 
-### `npm start`
+## Navigation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+No matter what route the user is visiting, they always see a navigation bar at the top of the window. It contain links to "Home", "Dashboard" and "About" pages.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Dashboard (/stocks)
 
-### `npm test`
+If a user visits /stocks or clicks "Home" in the navigation bar, they will be directed to a dashboard page. This page should list all of the stocks that the user is tracking, specifically their name and symbol. These stocks are pulled from data.js file in src/resources folder.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Stock (/stocks/:symbol)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If a user clicks on one of the stocks listed in the Dashboard view, they will be directed to an individual stock show view. This view displays all of a stock's attributes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## About (/about)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If a user clicks on "About" in the navigation bar, they will be directed to an about page. This is just a static page that displays a description of the app.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Screenshots of the app pages
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![home](./src/Images/homePage.jpg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![about](./src/Images/aboutPage.jpg)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![all stocks](./src/Images/listOfAllStocks.jpg)
 
-## Learn More
+![single stock](./src/Images/single_stock_page.jpg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -11,3 +11,56 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  font-size: 2em;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+main{
+  margin: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+}
+tbody>tr { 
+  border: solid;
+  border-width: 2px 0;
+}
+
+th{
+  font-size: 1.7em;
+  border-top: 0px;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dashboard>h1{
+  align-self: stretch;
+  display: flex;
+  justify-self: center;
+}
+
+

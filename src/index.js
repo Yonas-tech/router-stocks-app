@@ -1,17 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { StrictMode } from "react";
+import ReactDOM from "react-dom/client"; // "react-dom"
+import "./index.css";
+import App from "./App";
+//IMPORT BrowserRouter and rename it to Router
+import { BrowserRouter as Router } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+//Wrap the App Component with the Router component to enable the router features
+// ReactDOM.render(
+  // <StrictMode>
+  //   <Router>
+  //     <App />
+  //   </Router>
+  // </StrictMode>,
+//   document.getElementById("root")
+// );
+//Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. 
+// This is the solution: import ReactDom from react-dom/client
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <StrictMode>
+    <Router>
+      <App />
+    </Router>
+  </StrictMode>,
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
